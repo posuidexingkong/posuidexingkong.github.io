@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-26T15:05:11.412Z</updated>
+  <updated>2020-04-27T01:54:36.629Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>公告</title>
+    <link href="http://yoursite.com/2020/04/27/notice/"/>
+    <id>http://yoursite.com/2020/04/27/notice/</id>
+    <published>2020-04-26T16:00:00.000Z</published>
+    <updated>2020-04-27T01:54:36.629Z</updated>
+    
+    <content type="html"><![CDATA[<p>博客正在开发中😎</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;博客正在开发中😎&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>java学习笔记1</title>
@@ -50,7 +73,7 @@
     <link href="http://yoursite.com/2020/04/25/next/"/>
     <id>http://yoursite.com/2020/04/25/next/</id>
     <published>2020-04-24T16:00:00.000Z</published>
-    <updated>2020-04-26T15:06:50.627Z</updated>
+    <updated>2020-04-27T01:50:27.121Z</updated>
     
     <content type="html"><![CDATA[<h1 id="国外热门下载器IDM快速上手"><a href="#国外热门下载器IDM快速上手" class="headerlink" title="国外热门下载器IDM快速上手"></a>国外热门下载器IDM快速上手</h1><p>这是本人的第一篇博客，望大家海涵，新手博主在线教学。</p><h3 id="首先，了解一下IDM。"><a href="#首先，了解一下IDM。" class="headerlink" title="首先，了解一下IDM。"></a>首先，了解一下IDM。</h3><p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=56078837,1567002335&fm=26&gp=0.jpg%5D" alt></p><blockquote><p>IDM是一个使用多传输通道进行数据传输的数据传输工具，通俗来讲就是把一个文件分成多份同步进行数据传输，也就是下载，可以将你的网速发挥到很大.</p></blockquote><a id="more"></a><p>IDM不仅仅有着多传输通道的作用，还拥有着嗅探网页的功能，也就是说如果你想在一个网页上下载某个资源的时候IDM就会进行嗅探出这个资源的链接，然后进行传输下载到你的电脑上，通过我的试验，IDM在一般情况下确实可以通过你的网速来进行满速的下载，但这也仅仅只是在一般情况下适用。</p><p>在那些状况下不适用呢？国外的网站，通过某些条件的限制其他网友下载的网站等等.</p><p>那么，下面就开始我们的核心主题，快速上手IDM.</p><h3 id="下载一个IDM"><a href="#下载一个IDM" class="headerlink" title="下载一个IDM"></a>下载一个IDM</h3><p>蓝奏云:<a href="https://shengdetanxi.lanzous.com/ibwc9wb" target="_blank" rel="noopener">IDM下载</a>   密码:d5yz</p><p>官网下载:<a href="http://www.internetdownloadmanager.com/" target="_blank" rel="noopener">http://www.internetdownloadmanager.com/</a></p><p>虽然是破解版,但是请大家不要养成使用破解版的习惯.  如果是特殊原因或者是学生党可以理解,有钱的话还是推荐正版的使用.</p><p>(注意:这不是最新版的IDM,但是博主还是再用,还是不错的一个版本,当然各位博友也可以下载最新版的进行下载使用.)</p><h3 id="安装IDM"><a href="#安装IDM" class="headerlink" title="安装IDM"></a>安装IDM</h3><p>如何安装IDM压缩包里面的已经写得很清楚了.我就不重复说明了.</p><h3 id="如何配置IDM"><a href="#如何配置IDM" class="headerlink" title="如何配置IDM"></a>如何配置IDM</h3><p>先打开IDM中的选项</p><p><img src="/2020/04/25/next/A.png" alt="A"></p><p>在选项的常规中选择你所需要的浏览器,并且勾选”使用高级浏览器集成”,这时可以查看自己选着的浏览器是否有安装IDM插件.</p><p><img src="/2020/04/25/next/B.png" alt="B"></p><p>以谷歌浏览器为例检查自己的插件是否安装成功</p><p><img src="/2020/04/25/next/C.png" alt="C"></p><p>注意:如何没有发现IDM插件那就需要重新配置IDM的选项,还有如果浏览器有插件的情况下发现自己的插件突然变灰然后消失的情况下,重新勾选”使用高级浏览器集成”一项. 然后使用IDM目录里面的IDMGCCExt.crx拖到浏览器的扩展管理面板里面去.</p><h3 id="如何使用IDM进行下载"><a href="#如何使用IDM进行下载" class="headerlink" title="如何使用IDM进行下载"></a>如何使用IDM进行下载</h3><p>这里使用chrome浏览器进行演示说明</p><p><strong>在网页使用插件进行下载</strong></p><p>选择网页中的某个资源或者元素进行右键点击下载</p><p><img src="/2020/04/25/next/D.png" alt="D"></p><p>跳转到IDM的下载页面</p><p><img src="/2020/04/25/next/E.png" alt="E"></p><p>最后点击开始下载就会开始下载，然后保存在你的指定的路径里面。</p><p>以后指不定可以会写进阶的IDM下载教程也说不定。</p>]]></content>
     
