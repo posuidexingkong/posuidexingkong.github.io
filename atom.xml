@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-27T01:54:36.629Z</updated>
+  <updated>2020-04-28T12:57:41.133Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="http://yoursite.com/2020/04/27/notice/"/>
     <id>http://yoursite.com/2020/04/27/notice/</id>
     <published>2020-04-26T16:00:00.000Z</published>
-    <updated>2020-04-27T01:54:36.629Z</updated>
+    <updated>2020-04-28T12:57:41.133Z</updated>
     
-    <content type="html"><![CDATA[<p>博客正在开发中😎</p>]]></content>
+    <content type="html"><![CDATA[<p>博客正在开发中😎</p><p>更新日志</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;博客正在开发中😎&lt;/p&gt;
+&lt;p&gt;更新日志&lt;/p&gt;
 
       
     
