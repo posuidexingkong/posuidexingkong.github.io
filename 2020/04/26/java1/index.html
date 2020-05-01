@@ -114,13 +114,14 @@
 
 <img src="/2020/04/26/java1/1.png" alt="1" style="zoom: 150%;">
 
+<p>图片来源：<a href="https://www.eclipse.org/downloads/" target="_blank" rel="noopener">https://www.eclipse.org/downloads/</a></p>
 <p font-family="仿宋">java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（""）、布尔常量（boolean）、null常量。</p>
 
 <a id="more"></a>
 
 <p>基础语法没什么可以讲的，只不过需要注意一些要点就行。</p>
 <blockquote>
-<p>注释：单行注释:通常用于对程序中的某-行代码进行解释，用符号“//” 表示，“//”后面为被注释的内容。</p>
+<p>注释：单行注释:通常用于对程序中的某一行代码进行解释，用符号“//” 表示，“//”后面为被注释的内容。</p>
 <p>多行注释:顾名思义就是在注释中的内容可以为多行，它以符号“/<em>”开头，以符号“</em>/” 结尾。</p>
 <p>文档注释:以‘“/<em>*”开头，并在注释内容末尾以‘“</em>/‘”结束。</p>
 </blockquote>
@@ -128,7 +129,7 @@
 <p>1、包名所有字母一律小写。例如: cn.itcast.test.</p>
 <p>2、类名和接口名每个单词的首字母都要大写。如: ArrayLlist、 Iterator。</p>
 <p>3、常量名所有字母都大写，单词之间用下划线连接。例如:DAY_ OF_ _MONTH。</p>
-<p>4、变量名和方法名的第一 个单词首字母小写，从第二个单词开始每个单词首字母大写。例如: lineNumber、 getLineNumber.</p>
+<p>4、变量名和方法名的第一个单词首字母小写，从第二个单词开始每个单词首字母大写。例如: lineNumber、 getLineNumber.</p>
 <p>5、在程序中，应该尽量使用有意义的英文单词来定义标识符，使得程序便于阅读。例如使用userName表示用户名，password表示密码。</p>
 </blockquote>
 <p>还有在创建package和class的时候不要使用关键字去进行创建，关键字就是java中的函数，比如int  long   double等都是关键字。</p>
@@ -230,8 +231,9 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> a = <span class="number">100.6</span>;</span><br><span class="line"><span class="keyword">double</span> b = <span class="number">152.6</span>d;</span><br></pre></td></tr></table></figure>
 
 <h3 id="字符常量"><a href="#字符常量" class="headerlink" title="字符常量"></a>字符常量</h3><blockquote>
-<p>字符常量用于表示一个字符，一个字符常量要用一对英文半角格式的单引号(‘ ‘)引起来，它可以是英文字母、数字、标点符号、以及由转义序列来表示的特殊字符。具体示例如下:’a’    ‘1’    ‘&amp;’     ‘\r  ‘    ‘\u0000’ </p>
-<p>上面的示例中，’\u0000’表示一个空白字符，即在单引号之间没有任何字符。之，所以能这样表示是因为，Java采用的是Unicode字符集,Unicode字符以\u开头，空白字符在Unicode码表中对应的值为’\u0000’。</p>
+<p font-family="仿宋">字符常量用于表示一个字符，一个字符常量要用一对英文半角格式的单引号(' ')引起来，它可以是英文字母、数字、标点符号、以及由转义序列来表示的特殊字符。具体示例如下:'a'    '1'    '&'     '\r  '    '\u0000' </p>
+
+<p font-family="仿宋">上面的示例中，'\u0000'表示一个空白字符，即在单引号之间没有任何字符。之，所以能这样表示是因为，Java采用的是Unicode字符集,Unicode字符以\u开头，空白字符在Unicode码表中对应的值为'\u0000'。</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a =<span class="string">'a'</span> </span><br><span class="line"><span class="keyword">char</span> b =<span class="string">'\u0000'</span></span><br></pre></td></tr></table></figure>
 
