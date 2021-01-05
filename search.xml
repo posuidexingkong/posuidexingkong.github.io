@@ -1,201 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>java基础语法学习笔记</title>
-    <url>/2020/04/26/java1/</url>
-    <content><![CDATA[<img src="/2020/04/26/java1/1.png" alt="1" style="zoom: 150%;">
-
-<p>图片来源：<a href="https://www.eclipse.org/downloads/" target="_blank" rel="noopener">https://www.eclipse.org/downloads/</a></p>
-<p font-family="仿宋">java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（""）、布尔常量（boolean）、null常量。</p>
-
-<a id="more"></a>
-
-<p>基础语法没什么可以讲的，只不过需要注意一些要点就行。</p>
-<blockquote>
-<p>注释：单行注释:通常用于对程序中的某一行代码进行解释，用符号“//” 表示，“//”后面为被注释的内容。</p>
-<p>多行注释:顾名思义就是在注释中的内容可以为多行，它以符号“/<em>”开头，以符号“</em>/” 结尾。</p>
-<p>文档注释:以‘“/<em>*”开头，并在注释内容末尾以‘“</em>/‘”结束。</p>
-</blockquote>
-<h3 id="定义标识符需注意"><a href="#定义标识符需注意" class="headerlink" title="定义标识符需注意"></a>定义标识符需注意</h3><blockquote>
-<p>1、包名所有字母一律小写。例如: cn.itcast.test.</p>
-<p>2、类名和接口名每个单词的首字母都要大写。如: ArrayLlist、 Iterator。</p>
-<p>3、常量名所有字母都大写，单词之间用下划线连接。例如:DAY_ OF_ _MONTH。</p>
-<p>4、变量名和方法名的第一个单词首字母小写，从第二个单词开始每个单词首字母大写。例如: lineNumber、 getLineNumber.</p>
-<p>5、在程序中，应该尽量使用有意义的英文单词来定义标识符，使得程序便于阅读。例如使用userName表示用户名，password表示密码。</p>
-</blockquote>
-<p>还有在创建package和class的时候不要使用关键字去进行创建，关键字就是java中的函数，比如int  long   double等都是关键字。</p>
-<p>下面是常见的关键字</p>
-<table>
-<thead>
-<tr>
-<th align="center">abstract</th>
-<th align="center"><p align="center">continus</p></th>
-<th align="center">for</th>
-<th align="center">new</th>
-<th align="center">switch</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">assert</td>
-<td align="center"><p align="center">default</p></td>
-<td align="center">goto</td>
-<td align="center">package</td>
-<td align="center">synchronized</td>
-</tr>
-<tr>
-<td align="center">boolean</td>
-<td align="center"><p align="center">do</p></td>
-<td align="center">if</td>
-<td align="center">private</td>
-<td align="center">this</td>
-</tr>
-<tr>
-<td align="center">break</td>
-<td align="center"><p align="center">double</p></td>
-<td align="center">implements</td>
-<td align="center">protected</td>
-<td align="center">throw</td>
-</tr>
-<tr>
-<td align="center">byte</td>
-<td align="center"><p align="center">else</p></td>
-<td align="center">import</td>
-<td align="center">public</td>
-<td align="center">throws</td>
-</tr>
-<tr>
-<td align="center">case</td>
-<td align="center"><p align="center">enum</p></td>
-<td align="center">insranceof</td>
-<td align="center">return</td>
-<td align="center">traneient</td>
-</tr>
-<tr>
-<td align="center">catch</td>
-<td align="center"><p align="center">extends</p></td>
-<td align="center">int</td>
-<td align="center">short</td>
-<td align="center">try</td>
-</tr>
-<tr>
-<td align="center">char</td>
-<td align="center"><p align="center">final</p></td>
-<td align="center">interface</td>
-<td align="center">static</td>
-<td align="center">void</td>
-</tr>
-<tr>
-<td align="center">class</td>
-<td align="center"><p align="center">finally</p></td>
-<td align="center">long</td>
-<td align="center">strictfp</td>
-<td align="center">volatile</td>
-</tr>
-<tr>
-<td align="center">const</td>
-<td align="center"><p align="center">float</p></td>
-<td align="center">native</td>
-<td align="center">super</td>
-<td align="center">while</td>
-</tr>
-</tbody></table>
-<p>博主表示Typora的居中对齐有bug，逼得博主直接align。</p>
-<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>常量就是在程序中固定不变的值，是不能改变的数据。在Java中，常量包括整型常量、浮点数常量、布尔常量、字符常量等。</p>
-<h3 id="整形常量"><a href="#整形常量" class="headerlink" title="整形常量"></a>整形常量</h3><p>整形常量是整数类型的数据，它所表现的形式有以下几种类型。</p>
-<blockquote>
-<p>二进制:由数字0和1组成的数字序列，如: 00110101。</p>
-<p>八进制:以开头并且其后由0 ~7范围(包括和7)内的整数组成的数字序列，如: 0342。</p>
-<p>十进制:由数字0~9范围(包括o和9)内的整数组成的数字序列。如: 198。整数以十进制表示时，第一位不能是0，0本身除外。</p>
-<p>十六进制:以0x或者ox开头并且其后由0—9、A—F(包括和9、A和F)组成的数字序列，如0x25AF。</p>
-</blockquote>
-<h3 id="浮点数常量"><a href="#浮点数常量" class="headerlink" title="浮点数常量"></a>浮点数常量</h3><blockquote>
-<p>浮点数常量就是在数学中用到的小数，分为float单精度浮点数和double双精度浮点数两种类型。其中，单精度浮点数后面以F或f结尾，而双精度浮点数则以D或d结尾。当然，在使用浮点数时也可以在结尾处不加任何的后缀，此时虚拟机会默认为double双精度浮点数。浮点数常量还可以通过指数形式来表示。具体示例如下:2e3f   3.6d    0f    3.84d    5. 022e+23f4</p>
-</blockquote>
-<p>其中e表示倍数，而f是因为在浮点数常量中通过float赋值的情况下，一般默认浮点数的类型为double型，所以需要f来进行确定该值为float类型</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Market</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">float</span> a = <span class="number">1.2</span>; <span class="comment">//类型不匹配；不能从double转换为float</span></span><br><span class="line">		System.out.println(a);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面是Eclipse中得出结果，从上面可以看出，不写f的话1.2就会被判断为double型，所以需要在1.2后面加上f才能识别出float类型。</p>
-<p>如果不加f的话也可以解决这个问题吗？可以的,可以使用强制类型转换去进行转换，但是如果数值太大的话则可能会导致数值丢失问题。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">float</span> a = (<span class="keyword">float</span>) <span class="number">1.2</span>;<span class="comment">//强制类型转换</span></span><br></pre></td></tr></table></figure>
-
-<p>当数值类型为double类型时，值后面的字母D和d可加可不加。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> a = <span class="number">100.6</span>;</span><br><span class="line"><span class="keyword">double</span> b = <span class="number">152.6</span>d;</span><br></pre></td></tr></table></figure>
-
-<h3 id="字符常量"><a href="#字符常量" class="headerlink" title="字符常量"></a>字符常量</h3><blockquote>
-<p font-family="仿宋">字符常量用于表示一个字符，一个字符常量要用一对英文半角格式的单引号(' ')引起来，它可以是英文字母、数字、标点符号、以及由转义序列来表示的特殊字符。具体示例如下:'a'    '1'    '&'     '\r  '    '\u0000' </p>
-
-<p font-family="仿宋">上面的示例中，'\u0000'表示一个空白字符，即在单引号之间没有任何字符。之，所以能这样表示是因为，Java采用的是Unicode字符集,Unicode字符以\u开头，空白字符在Unicode码表中对应的值为'\u0000'。</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> a =<span class="string">'a'</span> </span><br><span class="line"><span class="keyword">char</span> b =<span class="string">'\u0000'</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="字符串常量"><a href="#字符串常量" class="headerlink" title="字符串常量"></a>字符串常量</h3><p>注意：字符串需要英文的括号和双引号，一个字符串可以包含一个字符或多个字符，也可以是不包含任何字符，即长度为零。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(a)<span class="comment">//这个不是字符串哦</span></span><br><span class="line">System.out.println(<span class="string">"a"</span>)<span class="comment">//这个才是(￣▽￣)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="布尔常量"><a href="#布尔常量" class="headerlink" title="布尔常量"></a>布尔常量</h3><p>布尔常量在java中不像C++那样使用1和0去表示true或者false.它是直接以true和false的值去进行判断的。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Market</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">boolean</span> a1 = <span class="keyword">false</span>;<span class="comment">//声明一个布尔类型，初始值为false</span></span><br><span class="line">        	a1 = <span class="keyword">true</span>;<span class="comment">//改变a1变量的值为ture</span></span><br><span class="line">		System.out.println(a1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>最后输出的结果是ture.</p>
-<h3 id="null常量"><a href="#null常量" class="headerlink" title="null常量"></a>null常量</h3><p>null常量只有一个值null，表示对象的引用为空。</p>
-<hr>
-<p>好了，这节java学习笔记到此为止，基础语法部分不是很难，后面才是重点学习的内容，学习笔记2什么时候有空我就什么时候写。</p>
-]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>学习分享</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>公告</title>
-    <url>/2020/11/01/notice/</url>
+    <url>/2021/01/05/notice/</url>
     <content><![CDATA[<p>博客正在开发中😎</p>
 <p>更新日志</p>
 <p>2020年11月1日：更新图片上传路径。</p>
+<p>2021年1月5日：新增网易云播放器、优化博客文章逻辑。</p>
 ]]></content>
   </entry>
   <entry>
-    <title>第一篇博客的诞生</title>
-    <url>/2020/04/25/next/</url>
-    <content><![CDATA[<h1 id="国外热门下载器IDM快速上手"><a href="#国外热门下载器IDM快速上手" class="headerlink" title="国外热门下载器IDM快速上手"></a>国外热门下载器IDM快速上手</h1><p>这是本人的第一篇博客，望大家海涵，新手博主在线教学。</p>
-<h3 id="首先，了解一下IDM。"><a href="#首先，了解一下IDM。" class="headerlink" title="首先，了解一下IDM。"></a>首先，了解一下IDM。</h3><p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=56078837,1567002335&fm=26&gp=0.jpg%5D" alt></p>
-<p>图片来源：<a href="https://chromecj.com/genuine/2019-05/2586.html" target="_blank" rel="noopener">https://chromecj.com/genuine/2019-05/2586.html</a></p>
-<blockquote>
-<p>IDM是一个使用多传输通道进行数据传输的数据传输工具，通俗来讲就是把一个文件分成多份同步进行数据传输，也就是下载，可以将你的网速发挥到很大.</p>
-</blockquote>
+    <title>PHP之日历项目实战经验</title>
+    <url>/2020/11/01/PHP/</url>
+    <content><![CDATA[<p><img src="https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/a34bc5317b9ad36619501df81078fc00668a7846b1280810ba7b4a4e7e094fb39ab09d0e5a7e5999803af6ef5524dae5?pictype=scale&from=30113&version=3.3.3.3&uin=3523751065&fname=pexels-stein-egil-liland-3573603.jpg&size=750" alt></p>
+<p>本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、for循环语句、if条件判断语句).</p>
 <a id="more"></a>
 
-<p>IDM不仅仅有着多传输通道的作用，还拥有着嗅探网页的功能，也就是说如果你想在一个网页上下载某个资源的时候IDM就会进行嗅探出这个资源的链接，然后进行传输下载到你的电脑上，通过我的试验，IDM在一般情况下确实可以通过你的网速来进行满速的下载，但这也仅仅只是在一般情况下适用。</p>
-<p>在那些状况下不适用呢？国外的网站，通过某些条件的限制其他网友下载的网站等等.</p>
-<p>那么，下面就开始我们的核心主题，快速上手IDM.</p>
-<h3 id="下载一个IDM"><a href="#下载一个IDM" class="headerlink" title="下载一个IDM"></a>下载一个IDM</h3><p>蓝奏云:<a href="https://shengdetanxi.lanzous.com/ibwc9wb" target="_blank" rel="noopener">IDM下载</a>   密码:d5yz</p>
-<p>官网下载:<a href="http://www.internetdownloadmanager.com/" target="_blank" rel="noopener">http://www.internetdownloadmanager.com/</a></p>
-<p>虽然是破解版,但是请大家不要养成使用破解版的习惯.  如果是特殊原因或者是学生党可以理解,有钱的话还是推荐正版的使用.</p>
-<p>(注意:这不是最新版的IDM,但是博主还是再用,还是不错的一个版本,当然各位博友也可以下载最新版的进行下载使用.)</p>
-<h3 id="安装IDM"><a href="#安装IDM" class="headerlink" title="安装IDM"></a>安装IDM</h3><p>如何安装IDM压缩包里面的已经写得很清楚了.我就不重复说明了.</p>
-<h3 id="如何配置IDM"><a href="#如何配置IDM" class="headerlink" title="如何配置IDM"></a>如何配置IDM</h3><p>先打开IDM中的选项</p>
-<p><img src="/2020/04/25/next/A.png" alt="A"></p>
-<p>在选项的常规中选择你所需要的浏览器,并且勾选”使用高级浏览器集成”,这时可以查看自己选着的浏览器是否有安装IDM插件.</p>
-<p><img src="/2020/04/25/next/B.png" alt="B"></p>
-<p>以谷歌浏览器为例检查自己的插件是否安装成功</p>
-<p><img src="/2020/04/25/next/C.png" alt="C"></p>
-<p>注意:如何没有发现IDM插件那就需要重新配置IDM的选项,还有如果浏览器有插件的情况下发现自己的插件突然变灰然后消失的情况下,重新勾选”使用高级浏览器集成”一项. 然后使用IDM目录里面的IDMGCCExt.crx拖到浏览器的扩展管理面板里面去.</p>
-<h3 id="如何使用IDM进行下载"><a href="#如何使用IDM进行下载" class="headerlink" title="如何使用IDM进行下载"></a>如何使用IDM进行下载</h3><p>这里使用chrome浏览器进行演示说明</p>
-<p><strong>在网页使用插件进行下载</strong></p>
-<p>选择网页中的某个资源或者元素进行右键点击下载</p>
-<p><img src="/2020/04/25/next/D.png" alt="D"></p>
-<p>跳转到IDM的下载页面</p>
-<p><img src="/2020/04/25/next/E.png" alt="E"></p>
-<p>最后点击开始下载就会开始下载，然后保存在你的指定的路径里面。</p>
-<p>以后指不定可以会写进阶的IDM下载教程也说不定。</p>
+<p>首先开始，我们来看一下题目：</p>
+<blockquote>
+<p>“使用PHP中基本语法制作出一个类型windows日历那样的日历，之后再原有代码的基础上制作出一年之中12个月份的全部日历，最后再通过该日历去对不同的年份时间日历进行显示”。</p>
+</blockquote>
+<h1 id="第一个问题：制作日历"><a href="#第一个问题：制作日历" class="headerlink" title="第一个问题：制作日历"></a>第一个问题：制作日历</h1><h2 id="php代码格式的建立"><a href="#php代码格式的建立" class="headerlink" title="php代码格式的建立"></a>php代码格式的建立</h2><p>首先先建立一个PHP中代码的格式</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="date函数获取当前系统时间"><a href="#date函数获取当前系统时间" class="headerlink" title="date函数获取当前系统时间"></a>date函数获取当前系统时间</h2><p>之后如果我们要去识别系统上的时间，所以我们将使用date函数</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$year = date(<span class="string">'Y'</span>);</span><br><span class="line">$month = date(<span class="string">'n'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>通过创建date函数语句去识别系统中的年和月，之后我们需要知道的是一个日历中我们首先是不是要知道一个月份中的第一天，之后后面的通过该月的第一天去对某个月份的日历中星期与日相对应，所以这时候需要去创建一个变量名为date的变量去存储该月份中第一天的时间。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$date = <span class="string">"$year-$month-1"</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="strtotime函数获取时间戳"><a href="#strtotime函数获取时间戳" class="headerlink" title="strtotime函数获取时间戳"></a>strtotime函数获取时间戳</h2><p>之后是不是需要去创建一个strtotime函数去获取该月中第一天的时间戳</p>
+<blockquote>
+<p>strtotime函数是通过1970年1月1日算起的一个获取时间戳的函数</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$str = strtotime($date);</span><br></pre></td></tr></table></figure>
+
+<p>通过时间戳我们可以获得某月中第一天为星期几的数字值</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$fristday = date(<span class="string">'w'</span>,$str);</span><br></pre></td></tr></table></figure>
+
+<h2 id="switch语句判断年月份"><a href="#switch语句判断年月份" class="headerlink" title="switch语句判断年月份"></a>switch语句判断年月份</h2><p>之后我们还有一个问题，就是在一年之中闰年和非闰年中2月份的天数是不同的，所以这时候需要设计一个可以判断是否为润年的代码，已知闰年的判断是<b>①$year能被4整除且不能被100整除则为非闰年②$year能被400整除的是闰年，所以：</b></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> ($month) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : $days = ($year % <span class="number">400</span> == <span class="number">0</span>  || ($year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; $year % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : $days = <span class="number">30</span> ; <span class="keyword">break</span> ;</span><br><span class="line">    <span class="keyword">default</span>: $days = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="html5标签构建日历框架"><a href="#html5标签构建日历框架" class="headerlink" title="html5标签构建日历框架"></a>html5标签构建日历框架</h2><p>通过switch语句去进行判断，判断系统的年份去判断该年是否为闰年，并且通过识别系统当前月份而去对该月份中天数进行判断。之后我们现在就该设计日历中类似windows10那样的日历框架(不知道的点击你电脑右下角的时间，没有win10的自己去装一个，实在不想装win10或者根本没有电脑百度总会了吧)<b>附链接： <a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></b></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;table width = '366' border = '0' cellpading = '0' cellspacing = '2' align='center'&gt;"</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;caption&gt;下面是$year 年$month 月的日历&lt;/caption&gt;"</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;tr align='center'&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' height = '40'&gt; 一&lt;/th&gt; &lt;th width = '50'&gt;二&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 三 &lt;/th&gt; &lt;th width = '50'&gt;四&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50'&gt; 五 &lt;/th&gt; &lt;th width = '50'&gt;六&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 日 &lt;/th&gt; "</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/th&gt;&lt;tr&gt;"</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br></pre></td></tr></table></figure>
+
+<p>通过表格来设计日历的框架，首先我们要先知道cellspacing是表格单元格间距设置为2像素，因为有八个边框所以总的width像素为16px，之后的350px我们将用来对日历中的列（每一列50px）进行设计，设计出类似windwos10日历中等宽等高的表格。</p>
+<p><b>注意：我们这一步的目的是需要计算出日历中每一格的宽度和高度，并对单元格间距之间也要进行计算，保证设计出来的日历是呈现一种整齐的效果</b></p>
+<h2 id="for语句与if语句判断输出"><a href="#for语句与if语句判断输出" class="headerlink" title="for语句与if语句判断输出"></a>for语句与if语句判断输出</h2><p>由于我们日历第一列为星期一，但是有的月数第一天不是星期一，而是星期二，这时候我们需要通过for与if语句进行判断，之后输出一个空单元格使之向后面移一位或者几位，达到日与星期对齐的效果，并且星期日在date(‘w’)中为0，还需要通过if去判断是否为星期天</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>($firstDay==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    $r = <span class="number">7</span>;  </span><br><span class="line">    $firstDay= $r; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>之后我们需要知道整个月的时间，就对$day进行遍历</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt;= $days ; $i++) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到星期日之后我们还需要让他换行</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (($i + $firstDay <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;tr&gt;"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这时候我们还需要明确知道今天为几日，我们需要通过设置一个css样式表改变表格中某个单元格的格式，也就是“高亮效果”</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /* 定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>最后关键的一步，判断是否为今天，是今天则使用CSS样式表，不是就不使用CSS样式表</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> ($i == date(<span class="string">'j'</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' class = 'tdBorder'&gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' &gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后输出结束的标记和表格结束的标记</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;/table&gt;"</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /* 定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$year = date(<span class="string">'Y'</span>);</span><br><span class="line">$month = date(<span class="string">'n'</span>);</span><br><span class="line">$date = <span class="string">"$year-$month-1"</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line">$str = strtotime($date); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line">$firstDay = date(<span class="string">'w'</span>,$str); <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> ($month) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : $days = ($year % <span class="number">400</span> == <span class="number">0</span>  || ($year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; $year % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : $days = <span class="number">30</span> ; <span class="keyword">break</span> ;</span><br><span class="line">    <span class="keyword">default</span>: $days = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;table width = '366' border = '0' cellpading = '0' cellspacing = '2' align='center'&gt;"</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;caption&gt;下面是$year 年$month 月的日历&lt;/caption&gt;"</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;tr align='center'&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' height = '40'&gt; 一&lt;/th&gt; &lt;th width = '50'&gt;二&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 三 &lt;/th&gt; &lt;th width = '50'&gt;四&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50'&gt; 五 &lt;/th&gt; &lt;th width = '50'&gt;六&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 日 &lt;/th&gt; "</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/th&gt;&lt;tr&gt;"</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标</span></span><br><span class="line"><span class="keyword">if</span>($firstDay==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    $r = <span class="number">7</span>;  </span><br><span class="line">    $firstDay= $r; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt;= $days ; $i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (($i + $firstDay <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;tr&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ($i == date(<span class="string">'j'</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' class = 'tdBorder'&gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' &gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;/table&gt;"</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="第二个问题：显示一年所有日历"><a href="#第二个问题：显示一年所有日历" class="headerlink" title="第二个问题：显示一年所有日历"></a>第二个问题：显示一年所有日历</h1><h2 id="使用for循环进行遍历"><a href="#使用for循环进行遍历" class="headerlink" title="使用for循环进行遍历"></a>使用for循环进行遍历</h2><p>这个问题可以通过for循环来完成，首先在原有的代码上进行循环也就是</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ($n=<span class="number">1</span>; $n &lt;=<span class="number">12</span> ; $n++) &#123;<span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>之后改变$month</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$month = $n;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="完整代码-1"><a href="#完整代码-1" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /*定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">for</span> ($n=<span class="number">1</span>; $n &lt;=<span class="number">12</span> ; $n++) &#123;  <span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line">$year = date(<span class="string">'Y'</span>);</span><br><span class="line">$month = $n;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br><span class="line">$date = <span class="string">"$year-$month-1"</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line">$str = strtotime($date); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line">$firstDay = date(<span class="string">'w'</span>,$str);  <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> ($n) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : $days = ($year % <span class="number">400</span> == <span class="number">0</span>  || ($year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; $year % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> : </span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : $days = <span class="number">30</span> ; <span class="keyword">break</span> ; <span class="comment">//4、6、9、11月为30天</span></span><br><span class="line">    <span class="keyword">default</span>: $days = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;table width = '366' border = '0' cellpading = '0' cellspacing = '2' align='center'&gt;"</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;caption&gt;下面是$year 年$month 月的日历&lt;/caption&gt;"</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;tr align='center'&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' height = '40'&gt; 一&lt;/th&gt; &lt;th width = '50'&gt;二&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 三 &lt;/th&gt; &lt;th width = '50'&gt;四&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50'&gt; 五 &lt;/th&gt; &lt;th width = '50'&gt;六&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 日 &lt;/th&gt; "</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/th&gt;&lt;tr&gt;"</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>($firstDay==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    $r = <span class="number">7</span>;  </span><br><span class="line">    $firstDay= $r; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt;= $days ; $i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (($i + $firstDay <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;tr&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ($i == date(<span class="string">'j'</span>) &amp;&amp; $n == date(<span class="string">'n'</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' class = 'tdBorder'&gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' &gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;/table&gt;"</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="第三个问题：改变日历年份"><a href="#第三个问题：改变日历年份" class="headerlink" title="第三个问题：改变日历年份"></a>第三个问题：改变日历年份</h1><p>我们以下一年为例，将$year进行改变</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$year = date(<span class="string">'Y'</span>,strtotime(<span class="string">"+1 year"</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="完整代码-2"><a href="#完整代码-2" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /*定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">for</span> ($n=<span class="number">1</span>; $n &lt;=<span class="number">12</span> ; $n++) &#123;  <span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line">$year = date(<span class="string">'Y'</span>,strtotime(<span class="string">"+1 year"</span>));<span class="comment">//通过修改变量year时间戳达到下一年的效果</span></span><br><span class="line">$month = $n;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br><span class="line">$date = <span class="string">"$year-$month-1"</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line">$str = strtotime($date); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line">$firstDay = date(<span class="string">'w'</span>,$str);  <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> ($n) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : $days = ($year % <span class="number">400</span> == <span class="number">0</span>  || ($year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; $year % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> : </span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : $days = <span class="number">30</span> ; <span class="keyword">break</span> ; <span class="comment">//4、6、9、11月为30天</span></span><br><span class="line">    <span class="keyword">default</span>: $days = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;table width = '366' border = '0' cellpading = '0' cellspacing = '2' align='center'&gt;"</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;caption&gt;下面是$year 年$month 月的日历&lt;/caption&gt;"</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;tr align='center'&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' height = '40'&gt; 一&lt;/th&gt; &lt;th width = '50'&gt;二&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 三 &lt;/th&gt; &lt;th width = '50'&gt;四&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50'&gt; 五 &lt;/th&gt; &lt;th width = '50'&gt;六&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 日 &lt;/th&gt; "</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/th&gt;&lt;tr&gt;"</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>($firstDay==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    $r = <span class="number">7</span>;  </span><br><span class="line">    $firstDay= $r; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt;= $days ; $i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (($i + $firstDay <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;tr&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ($i == date(<span class="string">'j'</span>) &amp;&amp; $n == date(<span class="string">'n'</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' class = 'tdBorder'&gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' &gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;/table&gt;"</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>该题目并不是很难，只要熟练掌握php基础语法基本上可以写出这种题，需要注意的也就日历框架的构建，以及各种逻辑思维的判断（例：星期日在date(‘w’)中为0，需要对星期日重新判断等）和时间戳的使用。</p>
 ]]></content>
       <categories>
-        <category>IDM</category>
-        <category>教程</category>
+        <category>PHP</category>
       </categories>
       <tags>
-        <tag>教程</tag>
+        <tag>学习分享</tag>
+        <tag>PHP</tag>
+        <tag>PHP实战</tag>
       </tags>
   </entry>
   <entry>
@@ -831,84 +723,193 @@
       </tags>
   </entry>
   <entry>
-    <title>PHP之日历项目实战经验</title>
-    <url>/2020/11/01/PHP/</url>
-    <content><![CDATA[<p><img src="https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/a34bc5317b9ad36619501df81078fc00668a7846b1280810ba7b4a4e7e094fb39ab09d0e5a7e5999803af6ef5524dae5?pictype=scale&from=30113&version=3.3.3.3&uin=3523751065&fname=pexels-stein-egil-liland-3573603.jpg&size=750" alt></p>
-<p>本次文章所涉及的知识有CSS样式表、html5标签、PHP(date函数、strtotime函数、switch语句、for循环语句、if条件判断语句).</p>
+    <title>java基础语法学习笔记</title>
+    <url>/2020/04/26/java1/</url>
+    <content><![CDATA[<img src="/2020/04/26/java1/1.png" alt="1" style="zoom: 150%;">
+
+<p>图片来源：<a href="https://www.eclipse.org/downloads/" target="_blank" rel="noopener">https://www.eclipse.org/downloads/</a></p>
+<p font-family="仿宋">java的基础语法需要掌握：java注释（Annotation）、标识符的定义规则、常量、整形常量（byte、short、int、long）、浮点数常量（float、double）、字符常量（char）、字符串常量（""）、布尔常量（boolean）、null常量。</p>
+
 <a id="more"></a>
 
-<p>首先开始，我们来看一下题目：</p>
+<p>基础语法没什么可以讲的，只不过需要注意一些要点就行。</p>
 <blockquote>
-<p>“使用PHP中基本语法制作出一个类型windows日历那样的日历，之后再原有代码的基础上制作出一年之中12个月份的全部日历，最后再通过该日历去对不同的年份时间日历进行显示”。</p>
+<p>注释：单行注释:通常用于对程序中的某一行代码进行解释，用符号“//” 表示，“//”后面为被注释的内容。</p>
+<p>多行注释:顾名思义就是在注释中的内容可以为多行，它以符号“/<em>”开头，以符号“</em>/” 结尾。</p>
+<p>文档注释:以‘“/<em>*”开头，并在注释内容末尾以‘“</em>/‘”结束。</p>
 </blockquote>
-<h1 id="第一个问题：制作日历"><a href="#第一个问题：制作日历" class="headerlink" title="第一个问题：制作日历"></a>第一个问题：制作日历</h1><h2 id="php代码格式的建立"><a href="#php代码格式的建立" class="headerlink" title="php代码格式的建立"></a>php代码格式的建立</h2><p>首先先建立一个PHP中代码的格式</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="date函数获取当前系统时间"><a href="#date函数获取当前系统时间" class="headerlink" title="date函数获取当前系统时间"></a>date函数获取当前系统时间</h2><p>之后如果我们要去识别系统上的时间，所以我们将使用date函数</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$year = date(<span class="string">'Y'</span>);</span><br><span class="line">$month = date(<span class="string">'n'</span>);</span><br></pre></td></tr></table></figure>
-
-<p>通过创建date函数语句去识别系统中的年和月，之后我们需要知道的是一个日历中我们首先是不是要知道一个月份中的第一天，之后后面的通过该月的第一天去对某个月份的日历中星期与日相对应，所以这时候需要去创建一个变量名为date的变量去存储该月份中第一天的时间。</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$date = <span class="string">"$year-$month-1"</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="strtotime函数获取时间戳"><a href="#strtotime函数获取时间戳" class="headerlink" title="strtotime函数获取时间戳"></a>strtotime函数获取时间戳</h2><p>之后是不是需要去创建一个strtotime函数去获取该月中第一天的时间戳</p>
+<h3 id="定义标识符需注意"><a href="#定义标识符需注意" class="headerlink" title="定义标识符需注意"></a>定义标识符需注意</h3><blockquote>
+<p>1、包名所有字母一律小写。例如: cn.itcast.test.</p>
+<p>2、类名和接口名每个单词的首字母都要大写。如: ArrayLlist、 Iterator。</p>
+<p>3、常量名所有字母都大写，单词之间用下划线连接。例如:DAY_ OF_ _MONTH。</p>
+<p>4、变量名和方法名的第一个单词首字母小写，从第二个单词开始每个单词首字母大写。例如: lineNumber、 getLineNumber.</p>
+<p>5、在程序中，应该尽量使用有意义的英文单词来定义标识符，使得程序便于阅读。例如使用userName表示用户名，password表示密码。</p>
+</blockquote>
+<p>还有在创建package和class的时候不要使用关键字去进行创建，关键字就是java中的函数，比如int  long   double等都是关键字。</p>
+<p>下面是常见的关键字</p>
+<table>
+<thead>
+<tr>
+<th align="center">abstract</th>
+<th align="center"><p align="center">continus</p></th>
+<th align="center">for</th>
+<th align="center">new</th>
+<th align="center">switch</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">assert</td>
+<td align="center"><p align="center">default</p></td>
+<td align="center">goto</td>
+<td align="center">package</td>
+<td align="center">synchronized</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center"><p align="center">do</p></td>
+<td align="center">if</td>
+<td align="center">private</td>
+<td align="center">this</td>
+</tr>
+<tr>
+<td align="center">break</td>
+<td align="center"><p align="center">double</p></td>
+<td align="center">implements</td>
+<td align="center">protected</td>
+<td align="center">throw</td>
+</tr>
+<tr>
+<td align="center">byte</td>
+<td align="center"><p align="center">else</p></td>
+<td align="center">import</td>
+<td align="center">public</td>
+<td align="center">throws</td>
+</tr>
+<tr>
+<td align="center">case</td>
+<td align="center"><p align="center">enum</p></td>
+<td align="center">insranceof</td>
+<td align="center">return</td>
+<td align="center">traneient</td>
+</tr>
+<tr>
+<td align="center">catch</td>
+<td align="center"><p align="center">extends</p></td>
+<td align="center">int</td>
+<td align="center">short</td>
+<td align="center">try</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center"><p align="center">final</p></td>
+<td align="center">interface</td>
+<td align="center">static</td>
+<td align="center">void</td>
+</tr>
+<tr>
+<td align="center">class</td>
+<td align="center"><p align="center">finally</p></td>
+<td align="center">long</td>
+<td align="center">strictfp</td>
+<td align="center">volatile</td>
+</tr>
+<tr>
+<td align="center">const</td>
+<td align="center"><p align="center">float</p></td>
+<td align="center">native</td>
+<td align="center">super</td>
+<td align="center">while</td>
+</tr>
+</tbody></table>
+<p>博主表示Typora的居中对齐有bug，逼得博主直接align。</p>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>常量就是在程序中固定不变的值，是不能改变的数据。在Java中，常量包括整型常量、浮点数常量、布尔常量、字符常量等。</p>
+<h3 id="整形常量"><a href="#整形常量" class="headerlink" title="整形常量"></a>整形常量</h3><p>整形常量是整数类型的数据，它所表现的形式有以下几种类型。</p>
 <blockquote>
-<p>strtotime函数是通过1970年1月1日算起的一个获取时间戳的函数</p>
+<p>二进制:由数字0和1组成的数字序列，如: 00110101。</p>
+<p>八进制:以开头并且其后由0 ~7范围(包括和7)内的整数组成的数字序列，如: 0342。</p>
+<p>十进制:由数字0~9范围(包括o和9)内的整数组成的数字序列。如: 198。整数以十进制表示时，第一位不能是0，0本身除外。</p>
+<p>十六进制:以0x或者ox开头并且其后由0—9、A—F(包括和9、A和F)组成的数字序列，如0x25AF。</p>
 </blockquote>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$str = strtotime($date);</span><br></pre></td></tr></table></figure>
+<h3 id="浮点数常量"><a href="#浮点数常量" class="headerlink" title="浮点数常量"></a>浮点数常量</h3><blockquote>
+<p>浮点数常量就是在数学中用到的小数，分为float单精度浮点数和double双精度浮点数两种类型。其中，单精度浮点数后面以F或f结尾，而双精度浮点数则以D或d结尾。当然，在使用浮点数时也可以在结尾处不加任何的后缀，此时虚拟机会默认为double双精度浮点数。浮点数常量还可以通过指数形式来表示。具体示例如下:2e3f   3.6d    0f    3.84d    5. 022e+23f4</p>
+</blockquote>
+<p>其中e表示倍数，而f是因为在浮点数常量中通过float赋值的情况下，一般默认浮点数的类型为double型，所以需要f来进行确定该值为float类型</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Market</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">float</span> a = <span class="number">1.2</span>; <span class="comment">//类型不匹配；不能从double转换为float</span></span><br><span class="line">		System.out.println(a);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>通过时间戳我们可以获得某月中第一天为星期几的数字值</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$fristday = date(<span class="string">'w'</span>,$str);</span><br></pre></td></tr></table></figure>
+<p>上面是Eclipse中得出结果，从上面可以看出，不写f的话1.2就会被判断为double型，所以需要在1.2后面加上f才能识别出float类型。</p>
+<p>如果不加f的话也可以解决这个问题吗？可以的,可以使用强制类型转换去进行转换，但是如果数值太大的话则可能会导致数值丢失问题。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">float</span> a = (<span class="keyword">float</span>) <span class="number">1.2</span>;<span class="comment">//强制类型转换</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="switch语句判断年月份"><a href="#switch语句判断年月份" class="headerlink" title="switch语句判断年月份"></a>switch语句判断年月份</h2><p>之后我们还有一个问题，就是在一年之中闰年和非闰年中2月份的天数是不同的，所以这时候需要设计一个可以判断是否为润年的代码，已知闰年的判断是<b>①$year能被4整除且不能被100整除则为非闰年②$year能被400整除的是闰年，所以：</b></p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> ($month) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : $days = ($year % <span class="number">400</span> == <span class="number">0</span>  || ($year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; $year % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : $days = <span class="number">30</span> ; <span class="keyword">break</span> ;</span><br><span class="line">    <span class="keyword">default</span>: $days = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当数值类型为double类型时，值后面的字母D和d可加可不加。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">double</span> a = <span class="number">100.6</span>;</span><br><span class="line"><span class="keyword">double</span> b = <span class="number">152.6</span>d;</span><br></pre></td></tr></table></figure>
 
-<h2 id="html5标签构建日历框架"><a href="#html5标签构建日历框架" class="headerlink" title="html5标签构建日历框架"></a>html5标签构建日历框架</h2><p>通过switch语句去进行判断，判断系统的年份去判断该年是否为闰年，并且通过识别系统当前月份而去对该月份中天数进行判断。之后我们现在就该设计日历中类似windows10那样的日历框架(不知道的点击你电脑右下角的时间，没有win10的自己去装一个，实在不想装win10或者根本没有电脑百度总会了吧)<b>附链接： <a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a></b></p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;table width = '366' border = '0' cellpading = '0' cellspacing = '2' align='center'&gt;"</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;caption&gt;下面是$year 年$month 月的日历&lt;/caption&gt;"</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;tr align='center'&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' height = '40'&gt; 一&lt;/th&gt; &lt;th width = '50'&gt;二&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 三 &lt;/th&gt; &lt;th width = '50'&gt;四&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50'&gt; 五 &lt;/th&gt; &lt;th width = '50'&gt;六&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 日 &lt;/th&gt; "</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/th&gt;&lt;tr&gt;"</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符常量"><a href="#字符常量" class="headerlink" title="字符常量"></a>字符常量</h3><blockquote>
+<p font-family="仿宋">字符常量用于表示一个字符，一个字符常量要用一对英文半角格式的单引号(' ')引起来，它可以是英文字母、数字、标点符号、以及由转义序列来表示的特殊字符。具体示例如下:'a'    '1'    '&'     '\r  '    '\u0000' </p>
 
-<p>通过表格来设计日历的框架，首先我们要先知道cellspacing是表格单元格间距设置为2像素，因为有八个边框所以总的width像素为16px，之后的350px我们将用来对日历中的列（每一列50px）进行设计，设计出类似windwos10日历中等宽等高的表格。</p>
-<p><b>注意：我们这一步的目的是需要计算出日历中每一格的宽度和高度，并对单元格间距之间也要进行计算，保证设计出来的日历是呈现一种整齐的效果</b></p>
-<h2 id="for语句与if语句判断输出"><a href="#for语句与if语句判断输出" class="headerlink" title="for语句与if语句判断输出"></a>for语句与if语句判断输出</h2><p>由于我们日历第一列为星期一，但是有的月数第一天不是星期一，而是星期二，这时候我们需要通过for与if语句进行判断，之后输出一个空单元格使之向后面移一位或者几位，达到日与星期对齐的效果，并且星期日在date(‘w’)中为0，还需要通过if去判断是否为星期天</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>($firstDay==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    $r = <span class="number">7</span>;  </span><br><span class="line">    $firstDay= $r; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p font-family="仿宋">上面的示例中，'\u0000'表示一个空白字符，即在单引号之间没有任何字符。之，所以能这样表示是因为，Java采用的是Unicode字符集,Unicode字符以\u开头，空白字符在Unicode码表中对应的值为'\u0000'。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> a =<span class="string">'a'</span> </span><br><span class="line"><span class="keyword">char</span> b =<span class="string">'\u0000'</span></span><br></pre></td></tr></table></figure>
 
-<p>之后我们需要知道整个月的时间，就对$day进行遍历</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt;= $days ; $i++) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="字符串常量"><a href="#字符串常量" class="headerlink" title="字符串常量"></a>字符串常量</h3><p>注意：字符串需要英文的括号和双引号，一个字符串可以包含一个字符或多个字符，也可以是不包含任何字符，即长度为零。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(a)<span class="comment">//这个不是字符串哦</span></span><br><span class="line">System.out.println(<span class="string">"a"</span>)<span class="comment">//这个才是(￣▽￣)</span></span><br></pre></td></tr></table></figure>
 
-<p>到星期日之后我们还需要让他换行</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (($i + $firstDay <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;tr&gt;"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="布尔常量"><a href="#布尔常量" class="headerlink" title="布尔常量"></a>布尔常量</h3><p>布尔常量在java中不像C++那样使用1和0去表示true或者false.它是直接以true和false的值去进行判断的。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Market</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">boolean</span> a1 = <span class="keyword">false</span>;<span class="comment">//声明一个布尔类型，初始值为false</span></span><br><span class="line">        	a1 = <span class="keyword">true</span>;<span class="comment">//改变a1变量的值为ture</span></span><br><span class="line">		System.out.println(a1);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>这时候我们还需要明确知道今天为几日，我们需要通过设置一个css样式表改变表格中某个单元格的格式，也就是“高亮效果”</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /* 定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>最后关键的一步，判断是否为今天，是今天则使用CSS样式表，不是就不使用CSS样式表</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> ($i == date(<span class="string">'j'</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' class = 'tdBorder'&gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' &gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>最后输出结束的标记和表格结束的标记</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;/table&gt;"</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /* 定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$year = date(<span class="string">'Y'</span>);</span><br><span class="line">$month = date(<span class="string">'n'</span>);</span><br><span class="line">$date = <span class="string">"$year-$month-1"</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line">$str = strtotime($date); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line">$firstDay = date(<span class="string">'w'</span>,$str); <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> ($month) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : $days = ($year % <span class="number">400</span> == <span class="number">0</span>  || ($year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; $year % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : $days = <span class="number">30</span> ; <span class="keyword">break</span> ;</span><br><span class="line">    <span class="keyword">default</span>: $days = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;table width = '366' border = '0' cellpading = '0' cellspacing = '2' align='center'&gt;"</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;caption&gt;下面是$year 年$month 月的日历&lt;/caption&gt;"</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;tr align='center'&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' height = '40'&gt; 一&lt;/th&gt; &lt;th width = '50'&gt;二&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 三 &lt;/th&gt; &lt;th width = '50'&gt;四&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50'&gt; 五 &lt;/th&gt; &lt;th width = '50'&gt;六&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 日 &lt;/th&gt; "</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/th&gt;&lt;tr&gt;"</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标</span></span><br><span class="line"><span class="keyword">if</span>($firstDay==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    $r = <span class="number">7</span>;  </span><br><span class="line">    $firstDay= $r; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">     <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt;= $days ; $i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (($i + $firstDay <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;tr&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ($i == date(<span class="string">'j'</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' class = 'tdBorder'&gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' &gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;/table&gt;"</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="第二个问题：显示一年所有日历"><a href="#第二个问题：显示一年所有日历" class="headerlink" title="第二个问题：显示一年所有日历"></a>第二个问题：显示一年所有日历</h1><h2 id="使用for循环进行遍历"><a href="#使用for循环进行遍历" class="headerlink" title="使用for循环进行遍历"></a>使用for循环进行遍历</h2><p>这个问题可以通过for循环来完成，首先在原有的代码上进行循环也就是</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ($n=<span class="number">1</span>; $n &lt;=<span class="number">12</span> ; $n++) &#123;<span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>之后改变$month</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$month = $n;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="完整代码-1"><a href="#完整代码-1" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /*定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">for</span> ($n=<span class="number">1</span>; $n &lt;=<span class="number">12</span> ; $n++) &#123;  <span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line">$year = date(<span class="string">'Y'</span>);</span><br><span class="line">$month = $n;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br><span class="line">$date = <span class="string">"$year-$month-1"</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line">$str = strtotime($date); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line">$firstDay = date(<span class="string">'w'</span>,$str);  <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> ($n) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : $days = ($year % <span class="number">400</span> == <span class="number">0</span>  || ($year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; $year % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> : </span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : $days = <span class="number">30</span> ; <span class="keyword">break</span> ; <span class="comment">//4、6、9、11月为30天</span></span><br><span class="line">    <span class="keyword">default</span>: $days = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;table width = '366' border = '0' cellpading = '0' cellspacing = '2' align='center'&gt;"</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;caption&gt;下面是$year 年$month 月的日历&lt;/caption&gt;"</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;tr align='center'&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' height = '40'&gt; 一&lt;/th&gt; &lt;th width = '50'&gt;二&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 三 &lt;/th&gt; &lt;th width = '50'&gt;四&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50'&gt; 五 &lt;/th&gt; &lt;th width = '50'&gt;六&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 日 &lt;/th&gt; "</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/th&gt;&lt;tr&gt;"</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>($firstDay==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    $r = <span class="number">7</span>;  </span><br><span class="line">    $firstDay= $r; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt;= $days ; $i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (($i + $firstDay <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;tr&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ($i == date(<span class="string">'j'</span>) &amp;&amp; $n == date(<span class="string">'n'</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' class = 'tdBorder'&gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' &gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;/table&gt;"</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="第三个问题：改变日历年份"><a href="#第三个问题：改变日历年份" class="headerlink" title="第三个问题：改变日历年份"></a>第三个问题：改变日历年份</h1><p>我们以下一年为例，将$year进行改变</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$year = date(<span class="string">'Y'</span>,strtotime(<span class="string">"+1 year"</span>));</span><br></pre></td></tr></table></figure>
-
-<h2 id="完整代码-2"><a href="#完整代码-2" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">.tdBorder&#123;border: <span class="number">1</span>px solid <span class="comment">#f00;&#125;  /*定义红色边框样式，为突出显示当前日期做准备*/</span></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">for</span> ($n=<span class="number">1</span>; $n &lt;=<span class="number">12</span> ; $n++) &#123;  <span class="comment">//循环遍历一年中12个月的日历</span></span><br><span class="line">$year = date(<span class="string">'Y'</span>,strtotime(<span class="string">"+1 year"</span>));<span class="comment">//通过修改变量year时间戳达到下一年的效果</span></span><br><span class="line">$month = $n;  <span class="comment">//通过for循环中的数值赋值给$month</span></span><br><span class="line">$date = <span class="string">"$year-$month-1"</span>; <span class="comment">//获取当前月第一天的日期格式，如“2018-5-1”。</span></span><br><span class="line">$str = strtotime($date); <span class="comment">//获取指定年份月份第一天的时间戳</span></span><br><span class="line">$firstDay = date(<span class="string">'w'</span>,$str);  <span class="comment">//获取指定时间戳对应的星期几的数字值</span></span><br><span class="line"><span class="comment">//下面获取当前月份的天数</span></span><br><span class="line"><span class="keyword">switch</span> ($n) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> : $days = ($year % <span class="number">400</span> == <span class="number">0</span>  || ($year % <span class="number">4</span> ==<span class="number">0</span> &amp;&amp; $year % <span class="number">100</span> !=<span class="number">0</span>))? <span class="number">29</span> : <span class="number">28</span> ; <span class="keyword">break</span> ; <span class="comment">//计算当年二月是否为闰年，是就为29天</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span> :</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span> : </span><br><span class="line">    <span class="keyword">case</span> <span class="number">9</span> :   </span><br><span class="line">    <span class="keyword">case</span> <span class="number">11</span> : $days = <span class="number">30</span> ; <span class="keyword">break</span> ; <span class="comment">//4、6、9、11月为30天</span></span><br><span class="line">    <span class="keyword">default</span>: $days = <span class="number">31</span>;  <span class="comment">//除了4、6、9、11月其他月份为31天</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;table width = '366' border = '0' cellpading = '0' cellspacing = '2' align='center'&gt;"</span>; <span class="comment">//输出表格，宽度设置为366</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;caption&gt;下面是$year 年$month 月的日历&lt;/caption&gt;"</span>; <span class="comment">//以表格标题行所在的行标记</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;tr align='center'&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' height = '40'&gt; 一&lt;/th&gt; &lt;th width = '50'&gt;二&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 三 &lt;/th&gt; &lt;th width = '50'&gt;四&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50'&gt; 五 &lt;/th&gt; &lt;th width = '50'&gt;六&lt;/th&gt;"</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;th width = '50' &gt; 日 &lt;/th&gt; "</span>; <span class="comment">//输出标题行单元格及内容</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/th&gt;&lt;tr&gt;"</span>;  <span class="comment">//输出标题行结束标记和第一个内容行开始的标记</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>($firstDay==<span class="number">0</span>)&#123; <span class="comment">//判断是否为星期天</span></span><br><span class="line">    $r = <span class="number">7</span>;  </span><br><span class="line">    $firstDay= $r; <span class="comment">//当天数为0时$r为7,则$r给$fristDay赋值为7</span></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt; $firstDay ; $i++) &#123;  <span class="comment">//使用循环结构控制当前月第一天前面的空单元格个数</span></span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;td&gt;&lt;/td&gt;"</span>;<span class="comment">//输出开始的空单元格，表格中的内容单元格&lt;td&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">1</span>; $i &lt;= $days ; $i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (($i + $firstDay <span class="number">-2</span> ) % <span class="number">7</span> == <span class="number">0</span>) &#123; <span class="comment">//判断星期几对应月的天数，如果有空则输出空格</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;tr&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ($i == date(<span class="string">'j'</span>) &amp;&amp; $n == date(<span class="string">'n'</span>)) &#123; <span class="comment">//判断是否为当天，是当天的话则输出单元格使用的是红色的边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' class = 'tdBorder'&gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;   <span class="comment">//否则不增加边框</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"&lt;td align = 'center' height = '30' &gt;"</span> . $i . <span class="string">"&lt;/td&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"&lt;/tr&gt;&lt;/table&gt;"</span>; <span class="comment">//输出最后一行结束的标记和表格结束的标记</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>该题目并不是很难，只要熟练掌握php基础语法基本上可以写出这种题，需要注意的也就日历框架的构建，以及各种逻辑思维的判断（例：星期日在date(‘w’)中为0，需要对星期日重新判断等）和时间戳的使用。</p>
+<p>最后输出的结果是ture.</p>
+<h3 id="null常量"><a href="#null常量" class="headerlink" title="null常量"></a>null常量</h3><p>null常量只有一个值null，表示对象的引用为空。</p>
+<hr>
+<p>好了，这节java学习笔记到此为止，基础语法部分不是很难，后面才是重点学习的内容，学习笔记2什么时候有空我就什么时候写。</p>
 ]]></content>
       <categories>
-        <category>PHP</category>
+        <category>java</category>
       </categories>
       <tags>
+        <tag>java</tag>
         <tag>学习分享</tag>
-        <tag>PHP</tag>
-        <tag>PHP实战</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一篇博客的诞生</title>
+    <url>/2020/04/25/next/</url>
+    <content><![CDATA[<h1 id="国外热门下载器IDM快速上手"><a href="#国外热门下载器IDM快速上手" class="headerlink" title="国外热门下载器IDM快速上手"></a>国外热门下载器IDM快速上手</h1><p>这是本人的第一篇博客，望大家海涵，新手博主在线教学。</p>
+<h3 id="首先，了解一下IDM。"><a href="#首先，了解一下IDM。" class="headerlink" title="首先，了解一下IDM。"></a>首先，了解一下IDM。</h3><p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=56078837,1567002335&fm=26&gp=0.jpg%5D" alt></p>
+<p>图片来源：<a href="https://chromecj.com/genuine/2019-05/2586.html" target="_blank" rel="noopener">https://chromecj.com/genuine/2019-05/2586.html</a></p>
+<blockquote>
+<p>IDM是一个使用多传输通道进行数据传输的数据传输工具，通俗来讲就是把一个文件分成多份同步进行数据传输，也就是下载，可以将你的网速发挥到很大.</p>
+</blockquote>
+<a id="more"></a>
+
+<p>IDM不仅仅有着多传输通道的作用，还拥有着嗅探网页的功能，也就是说如果你想在一个网页上下载某个资源的时候IDM就会进行嗅探出这个资源的链接，然后进行传输下载到你的电脑上，通过我的试验，IDM在一般情况下确实可以通过你的网速来进行满速的下载，但这也仅仅只是在一般情况下适用。</p>
+<p>在那些状况下不适用呢？国外的网站，通过某些条件的限制其他网友下载的网站等等.</p>
+<p>那么，下面就开始我们的核心主题，快速上手IDM.</p>
+<h3 id="下载一个IDM"><a href="#下载一个IDM" class="headerlink" title="下载一个IDM"></a>下载一个IDM</h3><p>蓝奏云:<a href="https://shengdetanxi.lanzous.com/ibwc9wb" target="_blank" rel="noopener">IDM下载</a>   密码:d5yz</p>
+<p>官网下载:<a href="http://www.internetdownloadmanager.com/" target="_blank" rel="noopener">http://www.internetdownloadmanager.com/</a></p>
+<p>虽然是破解版,但是请大家不要养成使用破解版的习惯.  如果是特殊原因或者是学生党可以理解,有钱的话还是推荐正版的使用.</p>
+<p>(注意:这不是最新版的IDM,但是博主还是再用,还是不错的一个版本,当然各位博友也可以下载最新版的进行下载使用.)</p>
+<h3 id="安装IDM"><a href="#安装IDM" class="headerlink" title="安装IDM"></a>安装IDM</h3><p>如何安装IDM压缩包里面的已经写得很清楚了.我就不重复说明了.</p>
+<h3 id="如何配置IDM"><a href="#如何配置IDM" class="headerlink" title="如何配置IDM"></a>如何配置IDM</h3><p>先打开IDM中的选项</p>
+<p><img src="/2020/04/25/next/A.png" alt="A"></p>
+<p>在选项的常规中选择你所需要的浏览器,并且勾选”使用高级浏览器集成”,这时可以查看自己选着的浏览器是否有安装IDM插件.</p>
+<p><img src="/2020/04/25/next/B.png" alt="B"></p>
+<p>以谷歌浏览器为例检查自己的插件是否安装成功</p>
+<p><img src="/2020/04/25/next/C.png" alt="C"></p>
+<p>注意:如何没有发现IDM插件那就需要重新配置IDM的选项,还有如果浏览器有插件的情况下发现自己的插件突然变灰然后消失的情况下,重新勾选”使用高级浏览器集成”一项. 然后使用IDM目录里面的IDMGCCExt.crx拖到浏览器的扩展管理面板里面去.</p>
+<h3 id="如何使用IDM进行下载"><a href="#如何使用IDM进行下载" class="headerlink" title="如何使用IDM进行下载"></a>如何使用IDM进行下载</h3><p>这里使用chrome浏览器进行演示说明</p>
+<p><strong>在网页使用插件进行下载</strong></p>
+<p>选择网页中的某个资源或者元素进行右键点击下载</p>
+<p><img src="/2020/04/25/next/D.png" alt="D"></p>
+<p>跳转到IDM的下载页面</p>
+<p><img src="/2020/04/25/next/E.png" alt="E"></p>
+<p>最后点击开始下载就会开始下载，然后保存在你的指定的路径里面。</p>
+<p>以后指不定可以会写进阶的IDM下载教程也说不定。</p>
+]]></content>
+      <categories>
+        <category>IDM</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
       </tags>
   </entry>
 </search>
